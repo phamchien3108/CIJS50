@@ -1,0 +1,70 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Mina', sans-serif;
+
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80vh;
+}
+
+#time {
+    font-size: 70px;
+    color: red;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50% 50%;
+    line-height: 200px;
+    background-color: rgb(8, 248, 188);
+}
+
+#red {
+
+    width: 200px;
+    height: 200px;
+    border-radius: 50% 50%;
+    margin-left: 20px;
+    border: 2px solid red;
+}
+
+.red {
+    background-color: red;
+}
+
+#yellow {
+
+    width: 200px;
+    height: 200px;
+    border-radius: 50% 50%;
+    margin-left: 20px;
+    border: 2px solid #FFFF00;
+}
+
+.yellow {
+    background-color: #FFFF00;
+}
+
+#green {
+
+    width: 200px;
+    height: 200px;
+    border-radius: 50% 50%;
+    margin-left: 20px;
+    border: 2px solid rgb(50, 255, 50);
+
+}
+
+.green {
+    background-color: rgb(50, 255, 50);
+}
+
+#app1,
+#app2 {
+    display: none;
+}

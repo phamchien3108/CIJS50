@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        function checkString(string1, string2) {
+            string1 = string1.split('').sort().join('');
+            string2 = string2.split('').sort().join('');
+            if (string1.length != string2.length) {
+                console.log(false);
+            } else if (string1 === string2) {
+                console.log(true);
+            } else
+                console.log(false);;
+        }
+        checkString('hiencs', 'csienh');
+        checkString('hanh', 'ahnh');
+        checkString('abxo', 'abxk');
+        checkString('abxds', 'abb');
+    </script>
+</body>
+
+</html>

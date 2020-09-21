@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        class Person {
+            name;
+            age;
+            sex;
+            address;
+
+            constructor(name, age, sex, address) {
+                this.name = name;
+                this.age = age;
+                this.sex = sex;
+                this.address = address;
+            }
+            speak() {
+                console.log("I'm a human!")
+            }
+            introduce() {
+                console.log(`
+                    Tên: ${this.name}
+                    Tuổi: ${this.age}
+                    Giới tính: ${this.sex}
+                    Địa chỉ nhà: ${this.address}
+
+                `)
+            }
+        }
+        class crush extends Person {
+            favorites;
+            appearance;
+            constructor(name, age, address, favorites, appearance) {
+                super(name, age, 'felmale', address);
+                this.favorites = favorites;
+                this.appearance = appearance;
+            }
+
+            speak() {
+                console.log("Chúng ta chỉ là bạn!");
+            }
+        }
+        class oldGirlFr extends Person {
+            appearance;
+            constructor(name, age, address, appearance) {
+                super(name, age, 'felmale', address);
+                this.appearance = appearance;
+            }
+            speak() {
+                console.log('I dont believe your love');
+            }
+        }
+
+        class list {
+            owner;
+            personList = [];
+            constructor(owner, personList) {
+                this.owner = owner;
+                this.personList = personList;
+            }
+
+            showAll() {
+                console.log(`Your List:`);
+                let pl = this.personList;
+                let i = 0;
+                while (true) {
+                    if (pl[i] == undefined) {
+                        break;
+                    } else {
+
+                        if (pl[i].favorites == undefined) {
+                            console.log(
+                                `${i}.
+OldGirlFr: Name-${pl[i].name}, Age-${pl[i].age}, Address-${pl[i].address}, Appearance-${pl[i].appearance}`
+                            );
+                        } else console.log(
+                            `${i}.
+Crush: Name-${pl[i].name}, Age-${pl[i].age}, Address-${pl[i].address}, Appearance-${pl[i].appearance}, Favorites-${pl[i].favorites}`
+                        );
+                        i++;
+                    }
+                }
+            }
+            addCr() {
+                alert('Infomation about your Crush!');
+                let name = prompt('Her name?');
+                let age = prompt('Her age?');
+                let address = prompt("Her address?");
+                let favorites = prompt("Her favorites?");
+                let appearance = prompt("Her appearance?");
+                let newPerson = new crush(name, age, address, favorites, appearance);
+                this.personList.push(newPerson);
+            }
+            addOldG() {
+                alert('Infomation about your Old Girl Friend!');
+                let name = prompt('Her name?');
+                let age = prompt('Her age?');
+                let address = prompt("Her address?");
+                let appearance = prompt("Her appearance?");
+                let newPerson = new oldGirlFr(name, age, address, appearance);
+                this.personList.push(newPerson);
+            }
+        }
+
+        let inputOwner = prompt("What is your name?");
+        let yourPersonList = [];
+        let yourList = new list(inputOwner, yourPersonList);
+        let check = true;
+
+        while (true) {
+            let input = prompt(
+                `Chào ${inputOwner}
+                List all of your Crush and your Old Girl Fr 
+                See all your list (input: 1)
+                Add new Crush     (input: 2)
+                Add new Old GirlFr(input: 3)`);
+            if (input == '1') {
+                yourList.showAll();
+            } else if (input == '2') {
+                yourList.addCr();
+            } else if (input == '3') {
+                yourList.addOldG();
+            } else {
+                break
+            }
+        }
+    </script>
+</body>
+
+</html>

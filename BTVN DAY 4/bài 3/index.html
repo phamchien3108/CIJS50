@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form-register></form-register>
+</body>
+<template id="form-register">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+
+    <div class="container">
+        <center>
+            <div class="alert alert-info" role="alert">
+                ĐĂNG KÍ TÀI KHOẢN
+            </div>
+        </center>
+        <form>
+            <div class="form-group">
+                <label for="username">Tên đăng nhập</label>
+                <input type="text" class="form-control" id="username" aria-describedby="usernamelHelp">
+                <small id="usernameHelp" class="form-text text-muted">Có ít nhất 6 kí tự(Không chứa các kí tự đặc
+                    biệt).</small>
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                <small id="emailHelp" class="form-text text-muted">Nhập đúng địa chỉ email của bạn.</small>
+            </div>
+            <div class="form-group">
+                <label for="password">Mật khẩu</label>
+                <input type="password" class="form-control" id="password">
+            </div>
+            <div class="form-group">
+                <label for="enter-password">Xác thực mật khẩu</label>
+                <input type="password" class="form-control" id="enter-password">
+            </div>
+            <button type="submit" class="btn btn-primary">ĐĂNG KÍ</button>
+        </form>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+</template>
+<script src="./app.js" type="module"></script>
+
+</html>
